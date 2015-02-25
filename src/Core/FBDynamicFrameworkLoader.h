@@ -201,10 +201,6 @@ OSStatus fbdfl_AudioServicesCreateSystemSoundID(CFURLRef inFileURL, SystemSoundI
 OSStatus fbdfl_AudioServicesDisposeSystemSoundID(SystemSoundID inSystemSoundID);
 void fbdfl_AudioServicesPlaySystemSound(SystemSoundID inSystemSoundID);
 
-#pragma mark AdSupport Classes
-
-Class fbdfl_ASIdentifierManagerClass(void);
-
 #pragma mark Accounts Constants
 
 NSString *fbdfl_ACFacebookAppIdKey(void);

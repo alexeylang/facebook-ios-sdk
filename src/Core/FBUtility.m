@@ -338,16 +338,7 @@ NSString *const FBPersistedAnonymousIDKey   = @"anon_id";
 }
 
 + (NSString *)advertiserID {
-    
-    NSString *result = nil;
-    
-    Class ASIdentifierManagerClass = fbdfl_ASIdentifierManagerClass();
-    if ([ASIdentifierManagerClass class]) {
-        ASIdentifierManager *manager = [ASIdentifierManagerClass sharedManager];
-        result = [[manager advertisingIdentifier] UUIDString];
-    }
-    
-    return result;
+    return nil;
 }
 
 + (NSString *)anonymousID {
@@ -408,13 +399,6 @@ NSString *const FBPersistedAnonymousIDKey   = @"anon_id";
     
     dispatch_once(&fetchAdvertisingTrackingStatusOnce, ^{
         status = AdvertisingTrackingUnspecified;
-        Class ASIdentifierManagerClass = fbdfl_ASIdentifierManagerClass();
-        if ([ASIdentifierManagerClass class]) {
-            ASIdentifierManager *manager = [ASIdentifierManagerClass sharedManager];
-            if (manager) {
-                status = [manager isAdvertisingTrackingEnabled] ? AdvertisingTrackingAllowed : AdvertisingTrackingDisallowed;
-            }
-        }
     });
 
     return status;
