@@ -15,5 +15,3 @@ project.xcworkspace
 xcuserdata
 .arcbuildbootstrap
 TestAppIdAndSecret.xcconfig
-src/ImageResources/*.*
-src/AudioResources/*.*
